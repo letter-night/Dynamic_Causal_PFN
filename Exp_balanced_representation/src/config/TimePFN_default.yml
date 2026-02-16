@@ -1,0 +1,9 @@
+epochs:
+  value: 100
+  desc: "number training epochs"
+patience:
+  value: 5
+  desc: "early stopping patience"
+batch_size:
+  value: 32
+  desc: "batch size"
