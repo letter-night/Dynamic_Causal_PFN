@@ -12,9 +12,9 @@ class CoverageMetric(Metric):
         self.add_state("sizes", default=torch.tensor([0]))
 
     def update(self, y_pred, y_true):
-        M, B, S = y_pred.shape 
+        # M, B, S = y_pred.shape 
         if self.mixture:
-            if S == 2:
+            if y_pred.shape[-1] == 2:
                 gm = GaussianMixture(means=y_pred[:, :, 0].T, stds=y_pred[:, :, 1].T)
             else:
                 gm = GaussianMixture_pfn(pi=y_pred[:, :, 0].T, means=y_pred[:, :, 1].T, stds=y_pred[:, :, 2].T)
