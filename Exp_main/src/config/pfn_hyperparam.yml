@@ -1,0 +1,53 @@
+---
+# PFN hyperparameter tuning on tau=1 forecast horizon
+
+# tune
+d_model: 128
+
+n_heads: 8
+
+e_layers: 2
+
+d_ff: 512
+
+embed_dim: 64
+
+gmm_n_components: 10
+
+coverage_metric_confidence: 0.95 
+ 
+
+# defaults
+learning_rate: 0.0001
+
+prediction_window: 1
+
+interpolation_method: 'linear'
+
+seq_len: 55
+
+pred_len: 1
+
+enc_in: 7  
+
+c_out: 7 
+
+treatment_size: 4 
+
+clip_grad: 0.0
+
+batch_size: 64
+
+max_epochs: 100
+
+patience: 10
+
+dropout: 0.1
+
+activation: 'gelu'
+
+patch_size: 2
+
+gmm_min_sigma: 1e-3
+
+gmm_pi_temp: 1.0 
