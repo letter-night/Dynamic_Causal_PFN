@@ -16,7 +16,7 @@ dropout_probability: 0.1
 
 dropout_type: 'dropout_head'
 
-prediction_window: 1
+prediction_window: 2
 
 intensity_weighting: False
 
@@ -35,5 +35,6 @@ batch_size: 64
 max_epochs: 500
 
 patience: 10
+
 
 ...
