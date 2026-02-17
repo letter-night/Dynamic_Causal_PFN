@@ -21,6 +21,7 @@ class CoverageMetric(Metric):
 
             # [batch, gmm_components]
             y_pred = gm.sample(int(1e4))
+            self.y_pred = y_pred 
         else:
             y_pred = y_pred.T
         lower = (1 - self.confidence_level) / 2
@@ -41,3 +42,6 @@ class CoverageMetric(Metric):
 
     def size(self):
         return torch.median(self.sizes[1:]) # skip zero value from initialization
+    
+    def point_est(self):
+        return self.y_pred 
