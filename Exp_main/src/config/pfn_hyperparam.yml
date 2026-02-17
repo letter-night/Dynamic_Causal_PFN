@@ -20,13 +20,13 @@ coverage_metric_confidence: 0.95
 # defaults
 learning_rate: 0.0001
 
-prediction_window: 1
+prediction_window: 2
 
 interpolation_method: 'linear'
 
 seq_len: 55
 
-pred_len: 1
+pred_len: 2
 
 enc_in: 7  
 
@@ -51,3 +51,4 @@ patch_size: 2
 gmm_min_sigma: 1e-3
 
 gmm_pi_temp: 1.0 
+
