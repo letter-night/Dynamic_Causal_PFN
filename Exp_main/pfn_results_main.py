@@ -13,9 +13,9 @@ import numpy as np
 def unpack_preds(pred_out):
     combined_data = {}
     losses = [batch['loss'] for batch in pred_out]
-    y_preds = [batch['y_pred'].permute(1, 0, 2) for batch in pred_out]
+    y_preds = [batch['y_pred'] for batch in pred_out]
     if 'sigma_pred' in pred_out[0].keys():
-        sigma_pred = [batch['sigma_pred'].permute(1, 0, 2) for batch in pred_out]
+        sigma_pred = [batch['sigma_pred'] for batch in pred_out]
     coverage = pred_out[-1]['coverage']
     size = pred_out[-1]['size']
     covariates = [batch['x'] for batch in pred_out]
@@ -201,3 +201,4 @@ def run_tests(pfn_path,
         coverage_df.to_csv(save_path+'/coverage_'+str(mc_samples)+'_'+window+extension+'.csv')
 
         torch.save(outcomes_dict, save_path + '/outcomes_' + str(mc_samples) + '_' + window +extension+'.pkl')
+
