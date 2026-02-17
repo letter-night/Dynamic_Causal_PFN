@@ -16,7 +16,7 @@ dropout_probability: 0.1
 
 dropout_type: 'dropout_head'
 
-prediction_window: 2
+prediction_window: 3
 
 intensity_weighting: False
 
@@ -38,3 +38,4 @@ patience: 10
 
 
 ...
+
