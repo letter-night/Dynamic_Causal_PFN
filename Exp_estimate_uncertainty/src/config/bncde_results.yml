@@ -1,0 +1,13 @@
+---
+# Specify local paths of BNCDE and TE-CDE model. Specify prediction window
+
+
+bncde_path: './epoch=85-step=13502.ckpt'
+
+informative_sampling: False
+
+window: 'two_step'
+
+# window is specified via 'one_step', 'two_step', 'three_step', 'four_step', 'five_step'
+
+...
